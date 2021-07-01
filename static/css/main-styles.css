@@ -1,0 +1,354 @@
+ /*
+ * Variables
+ */
+ :root {
+    --main-bg-color: rgb(0,123,255);
+    --footer-bg-color: rgba(0,0,0);
+  }
+ 
+ /*
+ * Animations
+ */
+ 
+ @keyframes roundCorners {
+    from,
+    60%,
+    75%,
+    90%,
+    to {
+      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+  
+    0% {
+        border-bottom-left-radius: 0% 0%;
+        border-bottom-right-radius: 0% 0%;
+    }
+    10% {
+        border-bottom-left-radius: 5% 5%;
+        border-bottom-right-radius: 5% 5%;
+    }
+    20% {
+        border-bottom-left-radius: 10% 10%;
+        border-bottom-right-radius: 10% 10%;
+    }
+    30% {
+        border-bottom-left-radius: 15% 15%;
+        border-bottom-right-radius: 15% 15%;
+    }
+    40% {
+        border-bottom-left-radius: 20% 20%;
+        border-bottom-right-radius: 20% 20%;
+    }
+    50% {
+        border-bottom-left-radius: 25% 25%;
+        border-bottom-right-radius: 25% 25%;
+    }
+    60% {
+        border-bottom-left-radius: 30% 30%;
+        border-bottom-right-radius: 30% 30%;
+    }
+    70% {
+        border-bottom-left-radius: 35% 35%;
+        border-bottom-right-radius: 35% 35%;
+    }
+    80% {
+        border-bottom-left-radius: 40% 40%;
+        border-bottom-right-radius: 40% 40%;
+    }
+    90% {
+        border-bottom-left-radius: 45% 45%;
+        border-bottom-right-radius: 45% 45%;
+    }
+  
+    to {
+        border-bottom-left-radius: 50% 50%;
+        border-bottom-right-radius: 50% 50%;
+    }
+  }
+  
+
+
+
+@keyframes bounceInLeft {
+    from,
+    60%,
+    75%,
+    90%,
+    to {
+      -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+  
+    0% {
+      opacity: 0;
+      -webkit-transform: translate3d(-3000px, 0, 0);
+      transform: translate3d(-3000px, 0, 0);
+    }
+  
+    60% {
+      opacity: 1;
+      -webkit-transform: translate3d(25px, 0, 0);
+      transform: translate3d(25px, 0, 0);
+    }
+  
+    75% {
+      -webkit-transform: translate3d(-10px, 0, 0);
+      transform: translate3d(-10px, 0, 0);
+    }
+  
+    90% {
+      -webkit-transform: translate3d(5px, 0, 0);
+      transform: translate3d(5px, 0, 0);
+    }
+  
+    to {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+
+
+
+@keyframes bounceInRight {
+    from,
+    60%,
+    75%,
+    90%,
+    to {
+      -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+  
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(3000px, 0, 0);
+      transform: translate3d(3000px, 0, 0);
+    }
+  
+    60% {
+      opacity: 1;
+      -webkit-transform: translate3d(-25px, 0, 0);
+      transform: translate3d(-25px, 0, 0);
+    }
+  
+    75% {
+      -webkit-transform: translate3d(10px, 0, 0);
+      transform: translate3d(10px, 0, 0);
+    }
+  
+    90% {
+      -webkit-transform: translate3d(-5px, 0, 0);
+      transform: translate3d(-5px, 0, 0);
+    }
+  
+    to {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+.bounceInRight {
+    -webkit-animation-name: bounceInRight;
+    animation-name: bounceInRight;
+}
+.roundCorners{
+    animation-name: roundCorners;
+    animation-duration: 0.25s;
+    animation-delay: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+ /*
+ * Base structure
+ */
+
+html,
+body {
+    height: auto;
+    color: #000;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: space-between
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+/* Links */
+
+a,
+a:focus,
+a:hover {
+    color: #fff;
+}
+
+h1{
+    color: var(--main-bg-color);
+    font-size: 3rem;
+}
+h2{
+    font-size: 2rem;
+}
+h3{
+    font-size: 1.5rem;
+}
+h4{
+    font-size: 1.25rem;
+}
+
+
+/*
+*
+*/
+
+#login-form{
+ width: 25%;
+}
+/*
+* Main Styles
+*/
+.mainContent{
+    display: flex;
+}
+
+.mainContent aside {
+    background: var(--main-bg-color);
+    padding: 4em;
+}
+
+main a:focus,
+main a:hover {
+    color: rgba(0, 0, 255, 0.75);
+    text-decoration: none;;
+}
+
+/*
+* Sidebar and About Us Page Styles
+*/
+
+ul.sidebarLinks {
+    padding: 20% 0 0;
+    width: 11rem;
+}
+.sidebarLinks > li {
+    padding: 0.5em;
+    border-top: 0.5px solid white;
+    border-bottom: 0.5px solid white;
+}
+
+ul.dropdown-menu {
+    background: black;
+}
+
+.aboutUs .admins{
+    display: flex;
+}
+
+
+
+
+/*
+ * Header
+ */
+
+.masthead {
+    margin-bottom: 2rem;
+}
+
+.masthead-brand {
+    margin-bottom: 0;
+}
+
+@media (min-width: 48em) {
+    .masthead-brand {
+        float: left;
+    }
+    .nav-masthead {
+        float: right;
+    }
+}
+
+
+/*
+* Navigation
+*/
+
+.navbar {
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    background-color: var(--main-bg-color);
+}
+
+.navbar-dark .navbar-nav .nav-link:focus,
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: black;
+}
+
+.navbar-dark .navbar-nav .active>.nav-link,
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .nav-link.show,
+.navbar-dark .navbar-nav .show>.nav-link {
+    color: #fff;
+}
+
+.masthead {
+    margin-bottom: 0;
+}
+
+/*
+* Article Body
+*/
+
+article.aboutUs{
+    padding: 1em 1em;
+    margin-left: 2em;
+    overflow: hidden;
+}
+
+
+/*
+* Service Cards
+*/
+.service-cards,.appointments,.recur-patients,.upcoming-appointments{
+    padding: 2em 2em 0;
+}
+.service-cards .card,.appointments .card,.recur-patients .card,.upcoming-appointments .card{
+    flex-direction: row;
+    margin-bottom: 1em;
+    background-color: rgba(0,0,0,0.5);
+    color:white;
+    border-radius: 50px;
+}
+
+
+/*
+* Footer
+*/
+.mastfoot{
+    background-color: var(--footer-bg-color);
+    padding: 1em 2em;
+    color: white;
+}
+a.card:hover,a.card:focus{
+    color: none;
+}
+a.card{
+    color: #000;
+}
+
+.ck-editor__editable_inline {
+    min-height: 400px;
+}
+
+/*
+* Front Page Carousel
+*/
+.carousel-caption{
+    background: linear-gradient(90deg,transparent 10%,rgba(0,0,0,.5),transparent 90%);
+}
